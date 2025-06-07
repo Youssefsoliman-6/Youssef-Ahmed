@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youssef Ahmed | Portfolio</title>
+  <style>
+    :root {
+      --primary: #004aad;
+      --light: #f7f9fc;
+      --text: #333;
+      --card-bg: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      display: flex;
+    }
+
+    /* === Shortcut Buttons === */
+    .shortcuts {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .shortcuts a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .shortcuts a:hover::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 50px;
+      background: var(--primary);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      opacity: 1;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+
+    /* === Main Content === */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+   header img {
+    width: 125px;
+    height: 140px;
+    border-radius: 41%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+}
+
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .project-card a {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .project-card a:hover {
+      background: #003080;
+    }
+
+    .resume-button {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .resume-button:hover {
+      background-color: #003080;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .shortcuts {
+        display: none;
+      }
+
+      main {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shortcut Icons Left-Center -->
+  <div class="shortcuts">
+    <a href="#about" data-label="About">👤</a>
+    <a href="#skills" data-label="Skills">🧠</a>
+    <a href="#projects" data-label="Projects">💼</a>
+    <a href="#resume" data-label="Resume">📄</a>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <header>
+      <img src="Photo.jpeg" alt="Youssef Ahmed">
+      <h1>Youssef Ahmed Elsayed</h1>
+      <p>💡 Aspiring AI Developer | 🎓 CS Student @ MIU</p>
+    </header>
+
+    <section id="about">
+      <h2>👤 About Me</h2>
+      <p><strong>Born:</strong> June 2, 2005</p>
+      <p><strong>University:</strong> Misr International University</p>
+      <p><strong>Nationality:</strong> Egyptian</p>
+      <p><strong>Email:</strong> <a href="mailto:youssef.soliman05@gmail.com">youssef.soliman05@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/youssef-solimann66" target="_blank">linkedin.com/in/youssef-solimann66</a></p>
+    </section>
+
+    <section id="skills">
+      <h2>🧠 Skills</h2>
+      <ul>
+        <li>💻 C++, Java, HTML, CSS, JavaScript</li>
+        <li>🌐 Node.js, Express, MySQL, MongoDB</li>
+        <li>🛠️ Xcode, NetBeans, Visual Studio, VS Code, XAMPP, Orange</li>
+        <li>🗣️ Fluent in English</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>💼 Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>🎵 Music Store System</h3>
+          <p>A basic desktop system to manage a music inventory.</p>
+          <a href="https://github.com/Youssefsoliman-6/Music-Store-System" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>📝 Online Exam System</h3>
+          <p>Web app to simulate online exams with student/admin login.</p>
+          <a href="https://github.com/Youssefsoliman-6/Online-Exam-System" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>✅ To-Do List</h3>
+          <p>Simple and functional to-do list made with web technologies.</p>
+          <a href="https://github.com/Youssefsoliman-6/To-Do-List" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>📐 Edit Distance (C++)</h3>
+          <p>Implementation of edit distance algorithm in C++.</p>
+          <a href="https://github.com/Youssefsoliman-6/Edit-Distance-Algorithms-in-C-" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>🌐 Network Infrastructure</h3>
+          <p>A project simulating real-world network topology and services.</p>
+          <a href="https://github.com/Youssefsoliman-6/Network-Infrastructure-Project" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>🧪 Diabetes Prediction</h3>
+          <p>Used Orange data mining to predict diabetes using data sets.</p>
+          <a href="https://github.com/Youssefsoliman-6/Diabetes-Prediction-with-Orange-Data-Mining" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>📄 Resume</h2>
+      <p>You can view or download my resume here:</p>
+      <a href="https://drive.google.com/file/d/1AzKPpasMjOzagvSz0mMmzX74hjSadYZj/view?usp=sharing" target="_blank">
+        <button class="resume-button">📄 View My Resume</button>
+      </a>
+    </section>
+
+    <footer>
+      <p>© 2025 Youssef Ahmed Elsayed — Portfolio built with HTML, CSS & JS</p>
+    </footer>
+  </main>
+
+</body>
+</html>
